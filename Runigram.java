@@ -117,8 +117,15 @@ public class Runigram {
 	 * Returns an image which is the grayscaled version of the given image.
 	 */
 	public static Color[][] grayScaled(Color[][] image) {
-		//// Replace the following statement with your code
-		return null;
+		int rows = image.length;
+    	int cols = image[0].length;
+    	Color[][] newImage = new Color[rows][cols];
+		for (int i = 0; i < rows; i++) {
+       	 	for (int j = 0; j < cols; j++) {
+            	newImage[i][j] = luminance(image[i][j]);
+        	}
+    	}
+		return newImage;
 	}	
 	
 	/**
